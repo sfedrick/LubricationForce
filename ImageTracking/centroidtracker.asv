@@ -28,7 +28,7 @@ screen though
 filein='C:\Users\shaun\Programs\Matlab\FluidsData\Videos\vids6_21\Acetal Resin Balls 0.125 inch\test1.mov';
 fileout='C:\Users\shaun\Programs\Matlab\FluidsData\Videos\Running\tedsaysimtrash.avi';
 Frames='C:\Users\shaun\Programs\Matlab\FluidsData\Videos\Running\Frames\';
-frameoriginal='C:\Users\shaun\Programs\Matlab\FluidsData\Videos\Running\Original Frames\';
+frameout='C:\Users\shaun\Programs\Matlab\FluidsData\Videos\Running\Original Frames\';
 vid=VideoReader(filein);
 info=get(vid);
 display(info);
@@ -88,7 +88,7 @@ frame=[0];
 height=[0];
 for img = start:stop
     filename1=strcat('frame',num2str(img),'.tif');
-    filename=[Frames,filename1];
+    filename=[FrameOriginal,filename1];
     fat = read(vid,img);
     
     if (crop==-1)
@@ -165,7 +165,7 @@ for img = start:stop
     if(write==1)
         imwrite(image,filename,'tif');
         filename1=strcat('frame',num2str(img),'.tif');
-        filename=[frameoriginal,filename1];
+        filename=[frameout,filename1];
         imwrite(original,filename,'tif');
         writeVideo(myVideo, original);
     end
