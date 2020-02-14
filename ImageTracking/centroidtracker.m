@@ -25,10 +25,10 @@ screen though
 
 
 
-filein="vids 6:21/Acetal Resin Balls 0.125 inch/test1.mov";
+filein='C:\Users\shaun\Programs\Matlab\FluidsData\Videos\vids6_21\Acetal Resin Balls 0.125 inch\test1.mov';
 fileout='tedsaysimtrash.avi';
-Frames='NewFrames/';
-frameout='originalframes/';
+Frames='C:\Users\shaun\Programs\Matlab\FluidsData\Videos\Running\Frames\';
+frameout='C:\Users\shaun\Programs\Matlab\FluidsData\Videos\Running\Original Frames\';
 vid=VideoReader(filein);
 info=get(vid);
 display(info);
