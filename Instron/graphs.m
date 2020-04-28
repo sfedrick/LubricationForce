@@ -3,7 +3,7 @@ clf
 
 path="glycerol.is_comp_RawData";
 test="glceryol";
-speed=0.1/100;
+speed=-10.9/100;
 times=[];
 extensionmm=[];
 loadn=[];
